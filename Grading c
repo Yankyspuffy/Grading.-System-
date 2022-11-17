@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int marks, course, exam;
+    printf("Enter course: ");
+    scanf("%d", &course);
+    printf("Enter exam: ");
+    scanf("%d", &exam);
+    marks = course + exam;
+    if (course >= 15 && exam >= 15) {
+        if (marks >= 70) {
+            printf("Your marks are: %d\n", marks);
+            printf("Your grade is: A\n");
+        } else if (marks <= 69 && marks >= 60) {
+            printf("Your marks are: %d%\n", marks);
+            printf("Your grade is: B\n");
+        } else if (marks <= 59 && marks >= 50) {
+            printf("Your marks are: %d%\n", marks);
+            printf("Your grade is: C\n");
+        } else if (marks <= 49 && marks >= 40) {
+            printf("Your marks are: %d%\n", marks);
+            printf("Your grade is: D\n");
+        } else if (marks == 39) {
+            marks + 1;
+            printf("Your marks are: %d%\n", marks);
+            printf("Your marks were moderated to 40.\n");
+            printf("Your grade is: D\n");
+        } else {
+            printf("Your marks are: %d%\n", marks);
+            printf("Your grade is: F\n");
+            
+        }
+    }
+    else {
+        printf("You failed the course.\n");
+        printf("Your marks are: 39%\n");
+        printf("Your grade is: F\n");
+        }
